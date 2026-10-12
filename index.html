@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liberation Timeline BD — 1971</title>
+<meta name="description" content="Interactive bilingual timeline of Bangladesh's 1971 Liberation War: events, key figures, sectors, operations and quiz. Fully offline.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="flagdot" aria-hidden="true"></div>
+      <h1><span id="brand-title">Liberation Timeline BD</span><small id="brand-sub">March – December 1971</small></h1>
+    </div>
+    <div class="top-actions">
+      <button class="langbtn" id="langbtn">বাংলা</button>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+</header>
+
+<main>
+  <section class="view" id="view-timeline">
+    <div class="section-head" id="h-timeline"></div>
+    <div class="monthnav" id="monthnav"></div>
+    <div class="searchrow"><input id="search" type="search" autocomplete="off"></div>
+    <div class="timeline" id="timeline-list"></div>
+  </section>
+
+  <section class="view" id="view-journey">
+    <div class="section-head" id="h-journey"></div>
+    <div class="journey" id="journey"></div>
+  </section>
+
+  <section class="view" id="view-figures">
+    <div class="section-head" id="h-figures"></div>
+    <div class="figgrid" id="figgrid"></div>
+  </section>
+
+  <section class="view" id="view-sectors">
+    <div class="section-head" id="h-sectors"></div>
+    <div id="sectors-body"></div>
+  </section>
+
+  <section class="view" id="view-quiz">
+    <div class="section-head" id="h-quiz"></div>
+    <div class="quizbox" id="quizbox"></div>
+  </section>
+
+  <section class="view" id="view-about">
+    <div class="section-head" id="h-about"></div>
+    <div id="about"></div>
+  </section>
+</main>
+
+<div class="modal-back" id="modalback">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="close" id="modalclose" aria-label="Close">×</button>
+    <div id="modalbody"></div>
+  </div>
+</div>
+
+<footer><span id="foot"></span></footer>
+
+<script src="js/data.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/app.js"></script>
+<script>
+document.getElementById("modalclose").addEventListener("click", function () {
+  document.getElementById("modalback").classList.remove("open");
+});
+</script>
+</body>
+</html>
